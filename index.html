@@ -1,22 +1,28 @@
 <!doctype html>
 <html lang="en">
 <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>Embed via Object Config Params</title>
-	<meta name="description" content="Antman tests CS-2099?"><meta name=”robots” content=”noindex”>
-	<style type="text/css">h2 { quotes: "“" "”"; }
-body { background-color:;}
-a[href ^= 'http']:not([href *= 'google.com']) {
-    background: transparent url(arrow.svg) no-repeat center right;
-    padding-right: 16px;
+	<title>Embed GTM Dev via Data Params</title>
+	<meta name="description" content="Embed GTM Dev"><meta name=”robots” content=”noindex”><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-141207555-1"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-141207555-1');
+
+onPageLoad: function (container) {
+ container.scrollIntoView();	
 }
-    body {
-      background-color: orangered !important;
-    }
+</script>
+<style>
+	    .black-box {
+	        height: 700px;
+	        
+	   
+	    }
 	</style>
 </head>
 <body>
 <header>
-<div id="logo">Need to add Agile Design Labs header</div>
 
 <nav>...</nav>
 </header>
@@ -26,9 +32,11 @@ a[href ^= 'http']:not([href *= 'google.com']) {
 
 <p>Provide personalized and just-in-time financial education to your consumers, employees and employer groups with a mobile-first financial education platform.</p>
 
-<h2><q>Testing Staging</q></h2>
+<h2>Testing Dev</h2>
+&nbsp;
 
-<h3>Object config parameter embedding</h3>
+<h3>Object Config embedding</h3>
+
 
 <pre>
 &lt;script&gt;
@@ -36,15 +44,15 @@ function exitTimes(){
   alert(&#39;done!!&#39;);
 }
 everFiProgramContentIframeOptions = {
-  account: &#39;21qatestact&#39;,
-  program: &#39;dgram01&#39;,
-  playlist: &#39;achieve&#39;,
-  module: &#39;630&#39;,
+  account: &#39;google-tag-manager&#39;,
+  program: &#39;embedded-program&#39;,
+  playlist: &#39;test-achieve&#39;,
+  module: &#39;466&#39;,
   onExit: &#39;exitTimes&#39;
 }
 &lt;/script&gt;
 &lt;script id=&quot;everfi-program-content-iframer&quot;
-        src=&quot;https://everfi-next-staging.net/embed_script.js&quot;&gt;
+        src=&quot;https://everfi-next-dev.net/embed_script.js/?locale=es&quot;&gt;
 &lt;/script&gt;
 </pre>
 <script>
@@ -52,15 +60,17 @@ function exitTimes(){
   alert('done!!');
 }
 everFiProgramContentIframeOptions = {
-  account: '21qatestact',
-  program: 'dgram01',
-  playlist: 'achieve',
-  module: '630',
+  account: 'google-tag-manager',
+  program: 'embedded-program',
+  playlist: 'test-achieve',
+  module: '466',
   onExit: 'exitTimes',
   height: 'expand'
 }
 </script><script id="everfi-program-content-iframer"
-        src="https://everfi-next-staging.net/embed_script.js">
+        src="https://everfi-next-dev.net/embed_script.js/?locale=es">
 </script></main>
+        
+       
 </body>
 </html>
